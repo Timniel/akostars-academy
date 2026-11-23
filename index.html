@@ -13,6 +13,7 @@
   <meta property="og:image" content="https://akostars.com/assets/share.jpg" />
   <meta name="twitter:card" content="summary" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:ital,wght@0,600;0,700;0,800;1,800&display=swap" rel="stylesheet" />
@@ -23,7 +24,7 @@
     "@type": "SportsOrganization",
     "name": "AkoStars Football Academy Limited",
     "sport": "Football",
-    "logo": "assets/logo.png",
+    "logo": "https://akostars.com/assets/logo.png",
     "email": "akostarsfootballacademy@gmail.com",
     "telephone": ["+2348035552842", "+2348033048346"],
     "address": {
@@ -53,7 +54,7 @@
       --max: 1160px;
     }
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
     body {
       margin: 0;
       font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -99,8 +100,8 @@
 
     /* Header */
     .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255, 255, 255, .96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-    .nav { display: flex; align-items: center; justify-content: space-between; height: 84px; gap: 20px; }
-    .nav-logo img { height: 66px; width: auto; }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 92px; gap: 20px; }
+    .nav-logo img { height: 76px; width: auto; }
     .nav-links { display: flex; align-items: center; gap: 30px; list-style: none; margin: 0; padding: 0; }
     .nav-links a { text-decoration: none; font: 600 .95rem "Montserrat", sans-serif; color: var(--navy); }
     .nav-links a:not(.btn):hover { color: var(--red); }
@@ -127,14 +128,14 @@
     .hero-card::before {
       content: ""; position: absolute; inset: 14px; border-radius: 20px; border: 2px solid rgba(0, 34, 114, .07); pointer-events: none;
     }
-    .hero-card img { position: relative; margin: 0 auto; width: min(100%, 360px); }
+    .hero-card img { position: relative; margin: 0 auto; width: min(100%, 360px); height: auto; }
     .rn-badge {
       position: relative; display: table; margin: 26px auto 0; padding: 9px 22px; border-radius: 999px;
       background: var(--navy); color: var(--white); font: 700 1.05rem/1 "Montserrat", sans-serif; letter-spacing: .02em;
     }
     .hero-card .tag { position: relative; text-align: center; font-size: .85rem; color: var(--muted); margin: 10px 0 0; }
     .star-float { position: absolute; color: var(--orange); }
-    .star-float.s1 { width: 46px; top: -18px; right: 26px; transform: rotate(14deg); }
+    .star-float.s1 { width: 42px; top: -18px; left: 26px; transform: rotate(-14deg); }
     .star-float.s2 { width: 26px; bottom: 30px; left: -12px; color: var(--red); transform: rotate(-12deg); }
 
     .hero-swoosh { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 150px; }
@@ -166,7 +167,7 @@
       position: absolute; left: 20px; right: 20px; bottom: 20px; background: var(--white); border-radius: 16px; padding: 16px 20px;
       box-shadow: 0 14px 34px -14px rgba(0, 0, 0, .35); display: flex; align-items: center; gap: 14px;
     }
-    .founder-card img { width: 46px; height: auto; flex: none; }
+    .founder-card img { width: 58px; height: auto; flex: none; }
     .founder-card strong { display: block; font-family: "Montserrat", sans-serif; color: var(--navy); font-size: 1.05rem; line-height: 1.2; }
     .founder-card span { font-size: .85rem; color: var(--muted); }
     .about-copy h2 { font-size: clamp(1.9rem, 3.4vw, 2.5rem); font-weight: 800; }
@@ -254,7 +255,7 @@
     .footer-swoosh { position: absolute; top: -1px; left: 0; width: 100%; height: 90px; }
     .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; padding-bottom: 50px; }
     .footer-logo { background: var(--white); border-radius: 16px; padding: 12px 16px; display: inline-block; margin-bottom: 16px; }
-    .footer-logo img { height: 74px; width: auto; }
+    .footer-logo img { height: 120px; width: auto; }
     .site-footer h4 { font: 700 1rem "Montserrat", sans-serif; color: var(--white); margin: 6px 0 16px; }
     .site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
     .site-footer a { text-decoration: none; }
@@ -299,7 +300,8 @@
     }
     @media (max-width: 560px) {
       section { padding: 72px 0; }
-      .nav-logo img { height: 48px; }
+      .nav { height: 76px; }
+      .nav-logo img { height: 58px; }
       .hero { padding-bottom: 120px; }
       .hero-swoosh { height: 90px; }
       .hero-corner { width: 90px; }
@@ -335,7 +337,7 @@
   <header class="site-header">
     <nav class="container nav" aria-label="Main">
       <a href="#top" class="nav-logo" aria-label="AkoStars Football Academy home">
-        <img src="assets/logo.png" alt="AkoStars Football Academy Limited logo" width="358" height="208" />
+        <img src="assets/logo-nav.png" alt="AkoStars Football Academy Limited logo" width="625" height="473" />
       </a>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <svg><use href="#i-menu" /></svg>
@@ -379,7 +381,7 @@
         <div class="hero-card reveal" aria-label="AkoStars Football Academy Limited">
           <svg class="star-float s1" aria-hidden="true"><use href="#i-star" /></svg>
           <svg class="star-float s2" aria-hidden="true"><use href="#i-star" /></svg>
-          <img src="assets/logo.png" alt="AkoStars Football Academy Limited" width="358" height="208" />
+          <img src="assets/logo.png" alt="AkoStars Football Academy Limited" width="629" height="582" />
           <span class="rn-badge">RN: 10003320</span>
           <p class="tag">AkoStars Football Academy Limited</p>
         </div>
@@ -631,7 +633,7 @@
     </svg>
     <div class="container footer-grid">
       <div>
-        <div class="footer-logo"><img src="assets/logo.png" alt="AkoStars Football Academy Limited" width="358" height="208" loading="lazy" /></div>
+        <div class="footer-logo"><img src="assets/logo.png" alt="AkoStars Football Academy Limited" width="629" height="582" loading="lazy" /></div>
         <p>Developing young football talent in Abuja through quality coaching, discipline and opportunity.</p>
         <p><strong style="color:#fff">AkoStars Football Academy Limited</strong><br />RN: 10003320</p>
       </div>
